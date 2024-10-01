@@ -1,0 +1,168 @@
+{
+  "PLC": {
+    "NetworkSettings": [
+      [
+        {
+          "Address": "192.168.0.10",
+          "Rack": 0,
+          "Slot": 1,
+          "PollPeriod": 1000
+        },
+        {
+          "Address": "192.168.0.30",
+          "Rack": 0,
+          "Slot": 1,
+          "PollPeriod": 1000
+        }
+      ]
+    ]
+  },
+  "Tags": {
+    "PLC": [
+      [
+        {
+          "Name": "FlowMeter1",
+          "ValAddr": 1,
+          "ValOffset": 36,
+          "ValType": "REAL",
+          "QualityUse": 1,
+          "QualityAddr": 1,
+          "QualityOffset": 40,
+          "QualityType": "BYTE",
+          "Function": "MeterDataChanged",
+          "FunctionParNum": 0,
+          "ParamRule": "1 & ((2 & 3) | (3 & 4))",
+          "TagLink": "Pump1,Valve1,Valve2,Valve3"
+        },
+        {
+          "Name": "FlowMeter2",
+          "ValAddr": 1,
+          "ValOffset": 210,
+          "ValType": "REAL",
+          "QualityUse": 0,
+          "QualityAddr": 1,
+          "QualityOffset": 214,
+          "QualityType": "BYTE",
+          "Function": "MeterDataChanged",
+          "FunctionParNum": 0,
+          "ParamRule": "1 & ((2 & 3) | (3 & 4))",
+          "TagLink": "Pump2,Valve4,Valve5,Valve6"
+        }
+      ],
+      [
+        {
+          "Name": "Pump1",
+          "ValAddr": 795,
+          "ValOffset": 68,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 795,
+          "QualityOffset": 68,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 6",
+          "TagLink": ""
+        },
+        {
+          "Name": "Pump2",
+          "ValAddr": 800,
+          "ValOffset": 68,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 795,
+          "QualityOffset": 68,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 6",
+          "TagLink": ""
+        },
+        {
+          "Name": "Valve1",
+          "ValAddr": 791,
+          "ValOffset": 50,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 791,
+          "QualityOffset": 50,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 5 | bool:eq 6 ",
+          "TagLink": ""
+        },
+        {
+          "Name": "Valve2",
+          "ValAddr": 796,
+          "ValOffset": 50,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 796,
+          "QualityOffset": 50,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 5 | bool:eq 6 ",
+          "TagLink": ""
+        },
+        {
+          "Name": "Valve3",
+          "ValAddr": 792,
+          "ValOffset": 50,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 792,
+          "QualityOffset": 50,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 5 | bool:eq 6 ",
+          "TagLink": ""
+        },
+        {
+          "Name": "Valve4",
+          "ValAddr": 793,
+          "ValOffset": 50,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 793,
+          "QualityOffset": 50,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 5 | bool:eq 6 ",
+          "TagLink": ""
+        },
+        {
+          "Name": "Valve5",
+          "ValAddr": 803,
+          "ValOffset": 50,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 803,
+          "QualityOffset": 50,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 5 | bool:eq 6 ",
+          "TagLink": ""
+        },
+        {
+          "Name": "Valve6",
+          "ValAddr": 794,
+          "ValOffset": 50,
+          "ValType": "BYTE",
+          "QualityUse": 0,
+          "QualityAddr": 794,
+          "QualityOffset": 50,
+          "QualityType": "BYTE",
+          "Function": "",
+          "FunctionParNum": 1,
+          "ParamRule": "bool:eq 5 | bool:eq 6 ",
+          "TagLink": ""
+        }
+      ]
+    ]
+  }
+}
